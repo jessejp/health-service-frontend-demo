@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Image from "next/image";
 
 export default function Home() {
@@ -55,7 +56,7 @@ export default function Home() {
             <div className="flex flex-col items-start w-80">
               <div>Book an appointment</div>
               <div>Select a date and time that suits your schedule.</div>
-              <button>Book Now</button>
+              <Button />
             </div>
           </div>
         </div>

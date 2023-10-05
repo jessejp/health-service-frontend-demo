@@ -1,8 +1,6 @@
 import { type PropsWithChildren } from "react";
 
-interface Props extends PropsWithChildren {}
-
-const H1: React.FC<Props> = ({ children }) => {
+const H1: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <h1 className="text-5xl leading-none font-bold text-black">{children}</h1>
   );

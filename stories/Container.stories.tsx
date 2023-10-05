@@ -11,7 +11,7 @@ const meta: Meta<typeof Container> = {
       control: { type: "radio" },
     },
     gap: {
-      options: ["default", "small"],
+      options: ["default", "medium", "small"],
       control: { type: "radio" },
     },
     align: {

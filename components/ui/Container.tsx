@@ -3,7 +3,7 @@ import { type PropsWithChildren } from "react";
 
 interface ContainerProps extends PropsWithChildren {
   direction?: "row" | "column";
-  gap?: "default" | "small";
+  gap?: "default" | "small" | "medium";
   align?: "start" | "center";
 }
 
@@ -16,12 +16,13 @@ const Container: React.FC<ContainerProps> = ({
   return (
     <div
       className={clsx(
-        "flex",
+        "flex max-md:flex-wrap",
         {
           "flex-col": direction === "column",
           "flex-row": direction === "row",
         },
         {
+          "gap-8": gap === "medium",
           "gap-6": gap === "default",
           "gap-4": gap === "small",
         },

@@ -14,22 +14,28 @@ import Accordion from "@/components/ui/Accordion";
 export default function Home() {
   return (
     <>
-      <nav className="w-screen bg-brand-light-gray h-24 flex items-center px-8 justify-between">
-        <div className="w-full max-w-[18rem]">
+      <nav className="flex justify-center w-screen bg-brand-light-gray  max-md:hidden">
+        <div className="flex w-full max-w-[1920px] items-center px-8 justify-between h-24">
           <Image
             src="/VetExpress_logo.svg"
             alt="VetExpress+ logo"
             width={226}
             height={43}
           />
-        </div>
-        <div className="flex gap-6 whitespace-nowrap">
-          <a href="#">About Us</a>
-          <a href="#">Services</a>
-          <a href="#">Book Appointment</a>
-          <a href="#">Out Values</a>
-        </div>
-        <div className="flex justify-end w-72">
+          <div className="flex gap-8 whitespace-nowrap">
+            <a className="hover:underline" href="#">
+              About Us
+            </a>
+            <a className="hover:underline" href="#">
+              Services
+            </a>
+            <a className="hover:underline" href="#">
+              Book Appointment
+            </a>
+            <a className="hover:underline" href="#">
+              Out Values
+            </a>
+          </div>
           <Button variant="outline" />
         </div>
       </nav>
@@ -61,14 +67,18 @@ export default function Home() {
               height={528}
             />
           </div>
-          <div className="flex w-full justify-between pt-8">
-            <div className="w-[40.0625rem]">
+          <div className="flex max-md:flex-wrap w-full justify-between pt-8">
+            <div className="max-w-[40.0625rem]">
               <H1>Welcome to VetExpress+</H1>
               <p className="mt-4">
                 Discover the exceptional care your animals deserve, complete
                 with hassle-free transportation to and from our dedicated
                 specialists. Choose from a range of specialized services offered
                 by our dedicated team.
+              </p>
+              <p className="mt-4">
+                Tell us about your animal&apos;s requirements. It&apos;s as
+                simple as sharing your needs and preferences.
               </p>
             </div>
             <div className="mr-6">
@@ -87,11 +97,11 @@ export default function Home() {
           <SectionSpacing />
 
           <H2>Booking Made Simple</H2>
-          <div className="flex items-start justify-between">
+          <div className="flex max-md:flex-wrap items-start justify-between">
             <Image
               src="/booking_dog.jpg"
               alt="happy dog image"
-              width={449}
+              width={483}
               height={408}
             />
             <Container align="start" direction="column">
@@ -129,7 +139,7 @@ export default function Home() {
           <SectionSpacing />
 
           <H2 center={true}>Our Core Values</H2>
-          <Container align="center">
+          <Container align="center" gap="medium">
             <Card
               iconPath="icon/checkmark-brand-blue.svg"
               iconSize={{ w: 24, h: 25 }}
@@ -175,9 +185,9 @@ export default function Home() {
           <SectionSpacing />
 
           <H2>Our Comprehensive Services</H2>
-          <div className="flex justify-between items-start">
+          <div className="flex max-md:flex-wrap justify-between items-start">
             <Container align="start" direction="column">
-              <Accordion heading="Preventative Care">
+              <Accordion heading="Preventative Care" defaultOpen={true}>
                 Our team is dedicated to keeping your animals healthy through
                 regular check-ups and vaccinations. We believe that prevention
                 is the key to a happy, healthy life for your animals
@@ -190,7 +200,9 @@ export default function Home() {
               <Accordion heading="24/7 Emergency Support">
                 Our team is dedicated to keeping your animals healthy through
                 regular check-ups and vaccinations. We believe that prevention
-                is the key to a happy, healthy life for your animals
+                is the key to a happy, healthy life for your animals Our team is
+                dedicated to keeping your animals healthy through regular
+                check-ups and vaccinations. We believe that prevention.
               </Accordion>
               <Accordion heading="Transportation Services">
                 Our team is dedicated to keeping your animals healthy through

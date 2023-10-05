@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
         "flex flex-col min-h-[11rem] p-4 bg-brand-light-gray rounded shadow-brand",
         {
           "w-80 gap-4": variant === "withButton",
-          "w-60 gap-3": variant === "text",
+          "w-[16.5rem] gap-3": variant === "text",
         }
       )}
     >

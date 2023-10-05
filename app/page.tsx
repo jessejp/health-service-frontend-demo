@@ -21,7 +21,7 @@ export default function Home() {
           <a href="#">Out Values</a>
         </div>
         <div className="flex justify-end w-72">
-          <button>Book Now</button>
+        <Button variant="outline" />
         </div>
       </nav>
       <main className="w-screen flex justify-center items-center">
@@ -56,7 +56,7 @@ export default function Home() {
             <div className="flex flex-col items-start w-80">
               <div>Book an appointment</div>
               <div>Select a date and time that suits your schedule.</div>
-              <Button />
+              <Button iconPath="/icon/calendar-white.svg" />
             </div>
           </div>
         </div>

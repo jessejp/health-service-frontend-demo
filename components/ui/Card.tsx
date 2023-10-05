@@ -28,17 +28,28 @@ const Card: React.FC<CardProps> = ({
         }
       )}
     >
-      <div className="flex gap-2 items-center">
+      <div
+        className={clsx("flex items-center", {
+          "gap-2": variant === "withButton",
+          "gap-3": variant === "text",
+        })}
+      >
         <div
           className={clsx("bg-brand-light-blue rounded-full", {
             "p-3": variant === "withButton",
             "p-1": variant === "text",
           })}
         >
-          <Image className="w-full" width={24} height={25} src={iconPath} alt={alt} />
+          <Image
+            className="w-8 aspect-square"
+            width={24}
+            height={25}
+            src={iconPath}
+            alt={alt}
+          />
         </div>
         <div className="w-[14.5rem]">
-        <H3 fontWeight="bold">{heading}</H3>
+          <H3 fontWeight="bold">{heading}</H3>
         </div>
       </div>
       <p

@@ -8,9 +8,9 @@ interface H2Props extends PropsWithChildren {
 const H2: React.FC<H2Props> = ({ center = false, children }) => {
   return (
     <h2
-      className={clsx("text-5xl leading-none font-medium text-black mb-6", {
+      className={clsx("text-5xl leading-none font-medium text-black mb-8", {
         "text-center": center,
-        "w-[32rem] text-left": !center,
+        "max-w-[32rem] text-left": !center,
       })}
     >
       {children}

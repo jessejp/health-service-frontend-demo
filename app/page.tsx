@@ -72,6 +72,7 @@ export default function Home() {
             <div className="mr-6">
               <Card
                 iconPath="icon/calendar-brand-blue.svg"
+                iconSize={{ w: 24, h: 25 }}
                 alt="calendar icon"
                 heading="Book an appointment"
                 variant="withButton"
@@ -84,7 +85,7 @@ export default function Home() {
           <SectionSpacing />
 
           <H2>Booking Made Simple</H2>
-          <div className="flex justify-between">
+          <div className="flex items-start justify-between">
             <Image
               src="/booking_dog.jpg"
               alt="happy dog image"
@@ -111,7 +112,7 @@ export default function Home() {
                 seamlessly into your day.
               </GuideStep>
               <GuideStep
-                iconPath="icon/calendar-white.svg"
+                iconPath="icon/checkmark-white.svg"
                 alt="calendar icon"
                 heading="3. Confirm Your Booking"
               >
@@ -119,6 +120,7 @@ export default function Home() {
                 it&apos;s time to confirm your booking. With just a click,
                 you&apos;re all set to receive premium care for your animals.
               </GuideStep>
+              <Button iconPath="icon/calendar-white.svg" />
             </Container>
           </div>
 
@@ -128,6 +130,7 @@ export default function Home() {
           <Container align="center">
             <Card
               iconPath="icon/checkmark-brand-blue.svg"
+              iconSize={{ w: 24, h: 25 }}
               alt="checkmark icon"
               heading="Compassionate Care"
               variant="text"
@@ -138,6 +141,7 @@ export default function Home() {
             </Card>
             <Card
               iconPath="icon/checkmark-brand-blue.svg"
+              iconSize={{ w: 24, h: 25 }}
               alt="checkmark icon"
               heading="Excellence in Expertise"
               variant="text"
@@ -147,6 +151,7 @@ export default function Home() {
             </Card>
             <Card
               iconPath="icon/checkmark-brand-blue.svg"
+              iconSize={{ w: 24, h: 25 }}
               alt="checkmark icon"
               heading="Convenience Redefined"
               variant="text"
@@ -156,6 +161,7 @@ export default function Home() {
             </Card>
             <Card
               iconPath="icon/checkmark-brand-blue.svg"
+              iconSize={{ w: 24, h: 25 }}
               alt="checkmark icon"
               heading="Trustworthy Partner"
               variant="text"

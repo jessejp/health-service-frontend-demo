@@ -22,7 +22,14 @@ export const Text: Story = {
       exclude: ["iconPath", "variant"],
     },
   },
-  render: (args) => <Card {...args} iconPath={TextCardIcon} variant="text" />,
+  render: (args) => (
+    <Card
+      {...args}
+      iconPath={TextCardIcon}
+      iconSize={{ w: 24, h: 25 }}
+      variant="text"
+    />
+  ),
 };
 
 export const WithButton: Story = {
@@ -37,6 +44,11 @@ export const WithButton: Story = {
     },
   },
   render: (args) => (
-    <Card {...args} iconPath={ButtonCardIcon} variant="withButton" />
+    <Card
+      {...args}
+      iconPath={ButtonCardIcon}
+      iconSize={{ w: 24, h: 25 }}
+      variant="withButton"
+    />
   ),
 };

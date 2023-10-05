@@ -6,6 +6,7 @@ import Button from "./Button";
 
 interface CardProps extends PropsWithChildren {
   iconPath: string;
+  iconSize: { w: number; h: number };
   alt: string;
   heading: string;
   variant: "text" | "withButton";
@@ -13,6 +14,7 @@ interface CardProps extends PropsWithChildren {
 
 const Card: React.FC<CardProps> = ({
   iconPath,
+  iconSize,
   alt,
   heading,
   variant,
@@ -37,18 +39,18 @@ const Card: React.FC<CardProps> = ({
         <div
           className={clsx("bg-brand-light-blue rounded-full", {
             "p-3": variant === "withButton",
-            "p-1": variant === "text",
+            "p-2": variant === "text",
           })}
         >
           <Image
-            className="w-8 aspect-square"
-            width={24}
-            height={25}
+            className="max-w-max"
+            width={iconSize.w}
+            height={iconSize.h}
             src={iconPath}
             alt={alt}
           />
         </div>
-        <div className="w-[14.5rem]">
+        <div className="w-full">
           <H3 fontWeight="bold">{heading}</H3>
         </div>
       </div>

@@ -16,16 +16,10 @@ const GuideStep: React.FC<GuideStepProps> = ({
 }) => {
   return (
     <div className="flex gap-6 items-center w-[35rem]">
-      <div className="bg-brand-dark-blue rounded p-3">
-        <Image
-          className="w-full"
-          width={24}
-          height={25}
-          src={iconPath}
-          alt={alt}
-        />
+      <div className="bg-brand-dark-blue rounded p-3 h-12 w-12">
+        <Image width={24} height={25} src={iconPath} alt={alt} />
       </div>
-      <div className="flex flex-col gap-3 w-[24.5rem]">
+      <div className="flex flex-col gap-3 w-[24.5rem] py-1">
         <H3 fontWeight="medium">{heading}</H3>
         <p className="font-normal text-base">{children}</p>
       </div>

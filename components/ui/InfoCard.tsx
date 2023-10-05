@@ -18,13 +18,10 @@ const InfoCard: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className={clsx(
-        "w-fit min-w-[18rem] flex gap-2 py-3 px-4 rounded items-center",
-        {
-          "bg-brand-dark-gray text-white": variant === "dark",
-          "bg-brand-light-gray text-black": variant === "light",
-        }
-      )}
+      className={clsx("w-80 flex gap-2 py-3 px-4 rounded items-center", {
+        "bg-brand-dark-gray text-white": variant === "dark",
+        "bg-brand-light-gray text-black": variant === "light",
+      })}
     >
       <div
         className={clsx(
@@ -35,7 +32,13 @@ const InfoCard: React.FC<Props> = ({
           }
         )}
       >
-        <Image src={iconPath} width={24} height={24} alt={alt} />
+        <Image
+          className="max-w-max"
+          src={iconPath}
+          width={24}
+          height={24}
+          alt={alt}
+        />
       </div>
       <div className="flex flex-col px-2 justify-start">
         <span className="text-xl font-bold">{heading}</span>

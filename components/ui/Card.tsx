@@ -6,6 +6,7 @@ import Button from "./Button";
 
 interface CardProps extends PropsWithChildren {
   iconPath: string;
+  iconSize: { w: number; h: number };
   alt: string;
   heading: string;
   variant: "text" | "withButton";
@@ -13,6 +14,7 @@ interface CardProps extends PropsWithChildren {
 
 const Card: React.FC<CardProps> = ({
   iconPath,
+  iconSize,
   alt,
   heading,
   variant,
@@ -21,24 +23,35 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       className={clsx(
-        "flex flex-col gap-3 min-h-[11rem] p-4 bg-brand-light-gray rounded shadow-brand",
+        "flex flex-col min-h-[11rem] p-4 bg-brand-light-gray rounded shadow-brand",
         {
-          "w-80": variant === "withButton",
-          "w-60": variant === "text",
+          "w-80 gap-4": variant === "withButton",
+          "w-60 gap-3": variant === "text",
         }
       )}
     >
-      <div className="flex gap-2 items-center">
+      <div
+        className={clsx("flex items-center", {
+          "gap-2": variant === "withButton",
+          "gap-3": variant === "text",
+        })}
+      >
         <div
           className={clsx("bg-brand-light-blue rounded-full", {
             "p-3": variant === "withButton",
-            "p-1": variant === "text",
+            "p-2": variant === "text",
           })}
         >
-          <Image className="w-full" width={24} height={25} src={iconPath} alt={alt} />
+          <Image
+            className="max-w-max"
+            width={iconSize.w}
+            height={iconSize.h}
+            src={iconPath}
+            alt={alt}
+          />
         </div>
-        <div className="w-44">
-        <H3 fontWeight="bold">{heading}</H3>
+        <div className="w-full">
+          <H3 fontWeight="bold">{heading}</H3>
         </div>
       </div>
       <p

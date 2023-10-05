@@ -16,7 +16,7 @@ export const Default: Story = {
     children: "Accordion body text is passed to the component as children.",
   },
   render: ({ heading, children }) => (
-    <Accordion heading={heading} storybookHack={true}>
+    <Accordion heading={heading}>
       {children}
     </Accordion>
   ),

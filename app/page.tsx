@@ -3,6 +3,7 @@ import H1 from "@/components/typography/H1";
 import Image from "next/image";
 import InfoCard from "@/components/ui/InfoCard";
 import Container from "@/components/ui/Container";
+import Card from "@/components/ui/Card";
 
 export default function Home() {
   return (
@@ -65,11 +66,14 @@ export default function Home() {
                 by our dedicated team.
               </p>
             </div>
-            <div className="flex flex-col items-start w-80">
-              <div>Book an appointment</div>
-              <div>Select a date and time that suits your schedule.</div>
-              <Button iconPath="/icon/calendar-white.svg" />
-            </div>
+            <Card
+              iconPath="icon/checkmark-brand-blue.svg"
+              alt="calendar icon"
+              heading="Book an appointment"
+              variant="withButton"
+            >
+              Select a date and time that suits your schedule.
+            </Card>
           </div>
         </div>
       </main>

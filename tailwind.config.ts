@@ -16,10 +16,9 @@ const config: Config = {
         "brand-primary-blue-light": "#4299E1",
         "brand-light-blue": "#BEE3F8",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      boxShadow: {
+        brand:
+          "0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);",
       },
     },
   },

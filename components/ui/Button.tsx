@@ -10,12 +10,14 @@ const Button: React.FC<Props> = ({ variant = "primary", iconPath }) => {
   return (
     <button
       className={clsx(
-        "text-lg font-semibold rounded-md h-12 w-fit pl-5 pr-6 ",
+        "text-lg font-semibold rounded-md h-12 w-fit",
         {
           "text-white bg-brand-primary-blue hover:bg-brand-primary-blue-light":
             variant === "primary",
           "text-brand-primary-blue bg-white border-[1px] border-brand-primary-blue":
             variant === "outline",
+          "pl-5 pr-6": !!iconPath,
+          "px-6": !iconPath,
         }
       )}
     >

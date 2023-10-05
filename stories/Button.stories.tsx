@@ -12,14 +12,19 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
-  render: () => <Button variant="primary" />,
+export const Default: Story = {
+  argTypes: {
+    variant: {
+      options: ["primary", "outline"],
+      control: { type: "radio" },
+    },
+  },
+  args: {
+    variant: "primary",
+  },
+  render: ({ variant }) => <Button variant={variant} />,
 };
 
-export const PrimaryWithIcon: Story = {
-  render: () => <Button iconPath={ButtonIcon} />,
-};
-
-export const Secondary: Story = {
-  render: () => <Button variant="outline"  />,
+export const WithIcon: Story = {
+  render: () => <Button variant="primary" iconPath={ButtonIcon} />,
 };

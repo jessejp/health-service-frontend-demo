@@ -1,5 +1,7 @@
-import Button from "@/components/Button";
+import Button from "@/components/ui/Button";
+import H1 from "@/components/typography/H1";
 import Image from "next/image";
+import InfoCard from "@/components/ui/InfoCard";
 
 export default function Home() {
   return (
@@ -21,20 +23,22 @@ export default function Home() {
           <a href="#">Out Values</a>
         </div>
         <div className="flex justify-end w-72">
-        <Button variant="outline" />
+          <Button variant="outline" />
         </div>
       </nav>
       <main className="w-screen flex justify-center items-center">
         <div className="max-w-[1140px] flex flex-col">
           <div className="w-fit h-fit relative">
-            <div>
-              <div className="absolute top-4 left-4 w-80 bg-brand-dark-gray flex gap-2 p-4 rounded text-white items-center">
+            <div className="absolute top-4 left-4 ">
+              {/* <div className="w-80 bg-brand-dark-gray flex gap-2 p-4 rounded text-white items-center">
                 <span>ABC</span>
                 <div className="flex flex-col px-2 justify-start">
                   <span className="text-xl">Emergency Call</span>
                   <span className="text-lg">+123 456 7890</span>
                 </div>
-              </div>
+              </div> */}
+              <InfoCard iconPath="/icon/phone-black.svg" alt="phone icon" variant="dark"  heading="Emergency Call" body="+123 456 7890" />
+              <InfoCard iconPath="/icon/time-black.svg" alt="clock icon" variant="light"  heading="Working Hours" body="8 a.m. - 6 p.m." />
             </div>
             <Image
               src="/hero.jpg"
@@ -45,7 +49,7 @@ export default function Home() {
           </div>
           <div className="flex">
             <div className="w-[40.0625rem]">
-              <h1>Welcome to VetExpress+</h1>
+              <H1>Welcome to VetExpress+</H1>
               <p>
                 Discover the exceptional care your animals deserve, complete
                 with hassle-free transportation to and from our dedicated

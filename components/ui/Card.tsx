@@ -21,10 +21,10 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       className={clsx(
-        "flex flex-col gap-3 min-h-[11rem] p-4 bg-brand-light-gray rounded shadow-brand",
+        "flex flex-col min-h-[11rem] p-4 bg-brand-light-gray rounded shadow-brand",
         {
-          "w-80": variant === "withButton",
-          "w-60": variant === "text",
+          "w-80 gap-4": variant === "withButton",
+          "w-60 gap-3": variant === "text",
         }
       )}
     >
@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({
         >
           <Image className="w-full" width={24} height={25} src={iconPath} alt={alt} />
         </div>
-        <div className="w-44">
+        <div className="w-[14.5rem]">
         <H3 fontWeight="bold">{heading}</H3>
         </div>
       </div>

@@ -2,10 +2,10 @@
 
 import { useState, type PropsWithChildren } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 interface AccordionProps extends PropsWithChildren {
   heading: string;
-  storybookHack?: boolean;
 }
 
 const Accordion: React.FC<AccordionProps> = ({ heading, children }) => {
@@ -19,7 +19,7 @@ const Accordion: React.FC<AccordionProps> = ({ heading, children }) => {
         }}
         className="flex justify-between"
       >
-        <span className="w-[26.0625rem] text-start">{heading}</span>
+        <span className="w-[26.0625rem] text-start font-medium">{heading}</span>
         <span>
           {isOpen ? (
             <Image
@@ -38,7 +38,14 @@ const Accordion: React.FC<AccordionProps> = ({ heading, children }) => {
           )}
         </span>
       </button>
-      {isOpen && <p className="w-full">{children}</p>}
+      <p
+        className={clsx("overflow-auto w-full transition-all duration-300", {
+          "opacity-0 h-0": !isOpen,
+          "opacity-100 h-auto": isOpen,
+        })}
+      >
+        {children}
+      </p>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const GuideStep: React.FC<GuideStepProps> = ({
   children,
 }) => {
   return (
-    <div className="flex gap-6 items-center">
+    <div className="flex gap-6 items-center w-[35rem]">
       <div className="bg-brand-dark-blue rounded p-3">
         <Image
           className="w-full"

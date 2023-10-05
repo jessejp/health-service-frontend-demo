@@ -19,7 +19,7 @@ const InfoCard: React.FC<Props> = ({
   return (
     <div
       className={clsx(
-        "w-fit min-w-[18rem] flex gap-2 py-3 px-4 rounded items-center",
+        "w-80 flex gap-2 py-3 px-4 rounded items-center",
         {
           "bg-brand-dark-gray text-white": variant === "dark",
           "bg-brand-light-gray text-black": variant === "light",

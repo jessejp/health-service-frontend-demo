@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/components/ui/Button";
 import H1 from "@/components/typography/H1";
 import Image from "next/image";
